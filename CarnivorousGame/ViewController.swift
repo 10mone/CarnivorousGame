@@ -20,7 +20,26 @@ class ViewController: UIViewController {
     @IBAction func button3(_ sender: UIButton) {
         PushButton()
     }
-
+    @IBAction func button4(_ sender: UIButton) {
+        PushButton()
+    }
+    @IBAction func button5(_ sender: UIButton) {
+        PushButton()
+    }
+    @IBAction func button6(_ sender: UIButton) {
+        PushButton()
+    }
+    @IBAction func button7(_ sender: UIButton) {
+        PushButton()
+    }
+    @IBAction func button8(_ sender: UIButton) {
+        PushButton()
+    }
+    @IBAction func button9(_ sender: UIButton) {
+        PushButton()
+    }
+    
+    
     func PushButton(){
         score_sum += 1
         score.text = score_sum.description
