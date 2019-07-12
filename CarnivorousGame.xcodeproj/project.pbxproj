@@ -14,6 +14,7 @@
 		3D1C151522D83CED00B18376 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D1C151322D83CED00B18376 /* LaunchScreen.storyboard */; };
 		3D1C152022D83CED00B18376 /* CarnivorousGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1C151F22D83CED00B18376 /* CarnivorousGameTests.swift */; };
 		3D1C152B22D83CED00B18376 /* CarnivorousGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1C152A22D83CED00B18376 /* CarnivorousGameUITests.swift */; };
+		3D1C153B22D86C4300B18376 /* LastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1C153A22D86C4300B18376 /* LastViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		3D1C152622D83CED00B18376 /* CarnivorousGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarnivorousGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D1C152A22D83CED00B18376 /* CarnivorousGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarnivorousGameUITests.swift; sourceTree = "<group>"; };
 		3D1C152C22D83CED00B18376 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D1C153A22D86C4300B18376 /* LastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				3D1C150A22D83CED00B18376 /* AppDelegate.swift */,
 				3D1C150C22D83CED00B18376 /* ViewController.swift */,
+				3D1C153A22D86C4300B18376 /* LastViewController.swift */,
 				3D1C150E22D83CED00B18376 /* Main.storyboard */,
 				3D1C151122D83CED00B18376 /* Assets.xcassets */,
 				3D1C151322D83CED00B18376 /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D1C150D22D83CED00B18376 /* ViewController.swift in Sources */,
+				3D1C153B22D86C4300B18376 /* LastViewController.swift in Sources */,
 				3D1C150B22D83CED00B18376 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +511,7 @@
 				3D1C153122D83CED00B18376 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D1C153222D83CED00B18376 /* Build configuration list for PBXNativeTarget "CarnivorousGameTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +520,7 @@
 				3D1C153422D83CED00B18376 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D1C153522D83CED00B18376 /* Build configuration list for PBXNativeTarget "CarnivorousGameUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +529,7 @@
 				3D1C153722D83CED00B18376 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

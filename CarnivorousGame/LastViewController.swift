@@ -7,3 +7,20 @@
 //
 
 import Foundation
+import UIKit
+
+class LastViewController: UIViewController{
+    @IBOutlet weak var score: UILabel!
+    
+    var finally_score: String!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        score.text = finally_score
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+}
