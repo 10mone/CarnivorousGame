@@ -21,7 +21,11 @@ xcuserdata/
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
-*.xcodeproj	#add
+
+
+########ここ付け足したら.swiftのコードも入らなくなった#######
+#*.xcodeproj
+
 
 ## Obj-C/Swift specific
 *.hmap

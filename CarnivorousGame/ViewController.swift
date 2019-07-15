@@ -13,12 +13,16 @@ class ViewController: UIViewController {
     var timer: Timer?
     
     @IBOutlet weak var score: UILabel!
+    @IBOutlet weak var button: UIButton!
+    
+    
     
     @IBAction func button(_ sender: UIButton) {
         PushButton()
         sender.isHidden = true
         BlinkFlying(sender)
     }
+    
     @IBAction func button2(_ sender: UIButton) {
         PushButton()
         sender.isHidden = true
@@ -59,27 +63,39 @@ class ViewController: UIViewController {
         sender.isHidden = true
         BlinkFlying(sender)
     }
+    //蝶々押したら減点！
+    @IBAction func cyou_button(_ sender: UIButton) {
+        if score_sum > 3{
+            score_sum -= 3
+        }else{
+            score_sum = 0
+        }
+        score.text = score_sum.description
+        sender.isHidden = true
+        BlinkFlying(sender)
+    }
+    
     //蚊を押したら合計スコア追加
     func PushButton(){
         score_sum += 1
         score.text = score_sum.description
     }
-    //消えたかを再び表示するまでの時間
+    
+    
+    //消えた蚊を再び表示するまでの時間
     func BlinkFlying(_ sender: UIButton){
-        timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true, block: {_ in self.re_Display(sender)})
+        timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true, block: {_ in sender.isHidden = false})
+        print("blinkflying")
+        //sender.isHidden = false
+        //timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true, block: {_ in sender.isHidden = true})
     }
-    //消えた蚊を再び表示
-    func re_Display(_ sender: UIButton){
-        sender.isHidden = false
-    }
+    
     //合計スコアを渡して画面遷移
     func changeView(){
         //description追加
         self.performSegue(withIdentifier: "toLastPage", sender: score_sum.description)
     }
     
-    
-    //var timer: Timer?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -87,8 +103,9 @@ class ViewController: UIViewController {
         timer = Timer.scheduledTimer(withTimeInterval: 30.0, repeats: false, block: {_ in self.changeView()})
         //timer = Timer.scheduledTimer(timeInterval: 10.0, target: self, selector: #selector(ViewController.changeView), userInfo: nil, repeats: false)
     }
+
     
-    //Segueの初期化を通知するメソッドをオーバーライド
+    //Segueの初期化をするメソッドをオーバーライド
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toLastPage"{
             let LastViewController = segue.destination as! LastViewController
