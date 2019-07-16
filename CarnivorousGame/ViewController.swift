@@ -14,6 +14,15 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var score: UILabel!
     @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var button2: UIButton!
+    @IBOutlet weak var button3: UIButton!
+    @IBOutlet weak var button4: UIButton!
+    @IBOutlet weak var button5: UIButton!
+    @IBOutlet weak var button6: UIButton!
+    @IBOutlet weak var button7: UIButton!
+    @IBOutlet weak var button8: UIButton!
+    @IBOutlet weak var button9: UIButton!
+    @IBOutlet weak var cyou_button: UIButton!
     
     
     
@@ -81,31 +90,38 @@ class ViewController: UIViewController {
         score.text = score_sum.description
     }
     
+    //合計スコアを渡して画面遷移
+    func changeView(){
+        //description追加
+        self.performSegue(withIdentifier: "toLastPage", sender: score_sum.description)
+    }
     
     //消えた蚊を再び表示するまでの時間
     func BlinkFlying(_ sender: UIButton){
-//        timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true, block: {_ in sender.isHidden = false})
-
         sender.isHidden = false
-        timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {_ in sender.isHidden = true})
+        timer = Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false, block: {_ in sender.isHidden = true})
     }
     
-    //合計スコアを渡して画面遷移
-    func changeView(){
-        //メモリ解放
-        if let workingTimer = timer{
-            workingTimer.invalidate()
-        }
-        //description追加
-        self.performSegue(withIdentifier: "toLastPage", sender: score_sum.description)
+    func eachFlying(blinktime: Double, _ sender: UIButton){
+        timer = Timer.scheduledTimer(withTimeInterval: blinktime, repeats: true, block: {_ in self.BlinkFlying(sender)})
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        timer = Timer.scheduledTimer(withTimeInterval: 3.0, repeats: true, block: {_ in self.BlinkFlying(self.button)})
-        
         timer = Timer.scheduledTimer(withTimeInterval: 30.0, repeats: false, block: {_ in self.changeView()})
+        
+        eachFlying(blinktime: 3.0, self.button)
+        eachFlying(blinktime: 2.7, self.button2)
+        eachFlying(blinktime: 1.7, self.button3)
+        eachFlying(blinktime: 1.9, self.button4)
+        eachFlying(blinktime: 2.3, self.button5)
+        eachFlying(blinktime: 1.4, self.button6)
+        eachFlying(blinktime: 2.5, self.button7)
+        eachFlying(blinktime: 2.9, self.button8)
+        eachFlying(blinktime: 1.5, self.button9)
+        eachFlying(blinktime: 2.1, self.cyou_button)
+        
         }
     
     
@@ -122,12 +138,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    /*
-    メモリが解放されているか確認
-    deinit{
-        print("release")
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        //メモリ解放
+        self.timer?.invalidate()
     }
-    */
     
 }
 
