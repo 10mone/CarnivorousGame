@@ -109,7 +109,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        timer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: false, block: {_ in self.changeView()})
+        timer = Timer.scheduledTimer(withTimeInterval: 20.0, repeats: false, block: {_ in self.changeView()})
         
         eachFlying(blinktime: 3.0, self.button)
         eachFlying(blinktime: 2.7, self.button2)
