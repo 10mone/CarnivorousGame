@@ -37,8 +37,6 @@ class LastViewController: UIViewController{
                                           completion: { finished in self.flying.removeFromSuperview()}
         )*/
         
-        
-        
         /*
         //ハエが別のところに行って上に上ってく
         let random = CGFloat(arc4random_uniform(UINT32_MAX)) / CGFloat(UINT32_MAX)
