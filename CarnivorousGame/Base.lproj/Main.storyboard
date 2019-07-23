@@ -21,14 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aap-E2-YWX">
-                                <rect key="frame" x="143" y="145" width="67" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="flying"/>
-                                <connections>
-                                    <action selector="button2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LJe-70-2z1"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCm-xj-qVy">
                                 <rect key="frame" x="363" y="150" width="107" height="124"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -124,11 +116,44 @@
                                     <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h5D-XS-bUs"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Qi-6F-7W3">
+                                <rect key="frame" x="34" y="87" width="75" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="rightbutterfly"/>
+                                <connections>
+                                    <action selector="cyou_button2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nb8-0a-yLA"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jhk-zs-Zad">
+                                <rect key="frame" x="203" y="114" width="69" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="butterfly"/>
+                                <connections>
+                                    <action selector="cyou_button3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k4V-yP-KjL"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3f-6i-Jsg">
+                                <rect key="frame" x="111" y="129" width="84" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="flying"/>
+                                <connections>
+                                    <action selector="button10:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fqc-cY-dur"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aap-E2-YWX">
+                                <rect key="frame" x="162" y="201" width="67" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="flying"/>
+                                <connections>
+                                    <action selector="button2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LJe-70-2z1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="button" destination="ecP-XZ-aJg" id="UCp-uu-tAE"/>
+                        <outlet property="button10" destination="w3f-6i-Jsg" id="Tt9-Os-67M"/>
                         <outlet property="button2" destination="Aap-E2-YWX" id="uuM-rl-Oci"/>
                         <outlet property="button3" destination="JhD-x8-LZb" id="782-SF-Aey"/>
                         <outlet property="button4" destination="Gpi-XL-nU4" id="21l-1u-STJ"/>
@@ -138,6 +163,8 @@
                         <outlet property="button8" destination="b6p-aQ-ap0" id="euC-o7-frB"/>
                         <outlet property="button9" destination="J1h-Sf-sLY" id="mui-f0-TBO"/>
                         <outlet property="cyou_button" destination="rOe-2F-R3w" id="bO1-qd-RMO"/>
+                        <outlet property="cyou_button2" destination="0Qi-6F-7W3" id="WIX-SP-uoy"/>
+                        <outlet property="cyou_button3" destination="Jhk-zs-Zad" id="DUk-t6-IYe"/>
                         <outlet property="score" destination="pyr-7Q-SdW" id="25u-Qv-zg6"/>
                         <segue destination="AbE-V4-bJ6" kind="presentation" identifier="toLastPage" id="OnS-cR-vdC"/>
                     </connections>

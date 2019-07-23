@@ -24,7 +24,7 @@ class LastViewController: UIViewController{
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: {_ in self.butterflyAnimation()})
         
     }
-    
+    //エラー出たり出なかったり？？
     func butterflyAnimation(){
         butterfly.alpha = 1.0
         UIView.animate(withDuration: 0.2, animations: {self.butterfly.alpha = 0.0},
