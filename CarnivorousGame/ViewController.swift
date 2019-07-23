@@ -22,7 +22,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var button7: UIButton!
     @IBOutlet weak var button8: UIButton!
     @IBOutlet weak var button9: UIButton!
+    @IBOutlet weak var button10: UIButton!
     @IBOutlet weak var cyou_button: UIButton!
+    @IBOutlet weak var cyou_button2: UIButton!
+    @IBOutlet weak var cyou_button3: UIButton!
     
     
     
@@ -63,7 +66,29 @@ class ViewController: UIViewController {
         PushButton()
         sender.isHidden = true
     }
+    @IBAction func button10(_ sender: UIButton) {
+        PushButton()
+        sender.isHidden = true
+    }
     @IBAction func cyou_button(_ sender: UIButton) {
+        if score_sum > 3 {
+            score_sum -= 3
+        } else {
+            score_sum = 0
+        }
+        score.text = score_sum.description
+        sender.isHidden = true
+    }
+    @IBAction func cyou_button2(_ sender: UIButton) {
+        if score_sum > 3 {
+            score_sum -= 3
+        } else {
+            score_sum = 0
+        }
+        score.text = score_sum.description
+        sender.isHidden = true
+    }
+    @IBAction func cyou_button3(_ sender: UIButton) {
         if score_sum > 3 {
             score_sum -= 3
         } else {
@@ -111,7 +136,8 @@ class ViewController: UIViewController {
         eachFlying(blinktime: 3.2, visibletime:0.5 , self.button8)
         eachFlying(blinktime: 1.8, visibletime:0.5 , self.button9)
         eachFlying(blinktime: 2.4, visibletime:0.4 , self.cyou_button)
-        
+        eachFlying(blinktime: 2.0, visibletime:0.4 , self.cyou_button2)
+        eachFlying(blinktime: 3.0, visibletime:0.4 , self.cyou_button3)
         
         }
     
