@@ -29,48 +29,39 @@ class ViewController: UIViewController {
     @IBAction func button(_ sender: UIButton) {
         PushButton()
         sender.isHidden = true
-        //BlinkFlying(sender)
     }
     
     @IBAction func button2(_ sender: UIButton) {
         PushButton()
         sender.isHidden = true
-        //BlinkFlying(sender)
     }
     @IBAction func button3(_ sender: UIButton) {
         PushButton()
         sender.isHidden = true
-        //BlinkFlying(sender)
     }
     @IBAction func button4(_ sender: UIButton) {
         PushButton()
         sender.isHidden = true
-        //BlinkFlying(sender)
     }
     @IBAction func button5(_ sender: UIButton) {
         PushButton()
         sender.isHidden = true
-        //BlinkFlying(sender)
     }
     @IBAction func button6(_ sender: UIButton) {
         PushButton()
         sender.isHidden = true
-        //BlinkFlying(sender)
     }
     @IBAction func button7(_ sender: UIButton) {
         PushButton()
         sender.isHidden = true
-        //BlinkFlying(sender)
     }
     @IBAction func button8(_ sender: UIButton) {
         PushButton()
         sender.isHidden = true
-        //BlinkFlying(sender)
     }
     @IBAction func button9(_ sender: UIButton) {
         PushButton()
         sender.isHidden = true
-        //BlinkFlying(sender)
     }
     @IBAction func cyou_button(_ sender: UIButton) {
         if score_sum > 3 {
@@ -80,7 +71,6 @@ class ViewController: UIViewController {
         }
         score.text = score_sum.description
         sender.isHidden = true
-        //BlinkFlying(sender)
     }
     
     
@@ -111,16 +101,16 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         timer = Timer.scheduledTimer(withTimeInterval: 20.0, repeats: false, block: {_ in self.changeView()})
         
-        eachFlying(blinktime: 3.0, visibletime:1.0 , self.button)
-        eachFlying(blinktime: 2.7, visibletime:1.0 , self.button2)
-        eachFlying(blinktime: 1.7, visibletime:1.0 , self.button3)
-        eachFlying(blinktime: 1.9, visibletime:1.0 , self.button4)
-        eachFlying(blinktime: 2.3, visibletime:1.0 , self.button5)
-        eachFlying(blinktime: 1.4, visibletime:1.0 , self.button6)
-        eachFlying(blinktime: 2.5, visibletime:1.0 , self.button7)
-        eachFlying(blinktime: 2.9, visibletime:1.0 , self.button8)
-        eachFlying(blinktime: 1.5, visibletime:1.0 , self.button9)
-        eachFlying(blinktime: 2.1, visibletime:0.4 , self.cyou_button)
+        eachFlying(blinktime: 3.3, visibletime:0.5 , self.button)
+        eachFlying(blinktime: 3.0, visibletime:0.5 , self.button2)
+        eachFlying(blinktime: 2.0, visibletime:0.5 , self.button3)
+        eachFlying(blinktime: 2.2, visibletime:0.5 , self.button4)
+        eachFlying(blinktime: 2.6, visibletime:0.5 , self.button5)
+        eachFlying(blinktime: 1.7, visibletime:0.5 , self.button6)
+        eachFlying(blinktime: 2.8, visibletime:0.5 , self.button7)
+        eachFlying(blinktime: 3.2, visibletime:0.5 , self.button8)
+        eachFlying(blinktime: 1.8, visibletime:0.5 , self.button9)
+        eachFlying(blinktime: 2.4, visibletime:0.4 , self.cyou_button)
         
         
         }
