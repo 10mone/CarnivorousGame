@@ -126,22 +126,20 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         timer = Timer.scheduledTimer(withTimeInterval: 20.0, repeats: false, block: {_ in self.changeView()})
         
-        eachFlying(blinktime: 3.7, visibletime:0.5 , self.button)
-        eachFlying(blinktime: 3.0, visibletime:0.5 , self.button2)
-        eachFlying(blinktime: 2.2, visibletime:0.5 , self.button3)
-        eachFlying(blinktime: 2.9, visibletime:0.5 , self.button4)
-        eachFlying(blinktime: 2.6, visibletime:0.5 , self.button5)
-        eachFlying(blinktime: 2.3, visibletime:0.5 , self.button6)
-        eachFlying(blinktime: 2.8, visibletime:0.5 , self.button7)
-        eachFlying(blinktime: 3.2, visibletime:0.5 , self.button8)
-        eachFlying(blinktime: 1.9, visibletime:0.5 , self.button9)
-        eachFlying(blinktime: 3.4, visibletime:0.5 , self.button10)
-        eachFlying(blinktime: 2.4, visibletime:0.4 , self.cyou_button)
-        eachFlying(blinktime: 1.7, visibletime:0.4 , self.cyou_button2)
-        eachFlying(blinktime: 3.0, visibletime:0.4 , self.cyou_button3)
-        
+        eachFlying(blinktime: 3.3, visibletime:1.3 , self.button)
+        eachFlying(blinktime: 3.0, visibletime:1.4 , self.button2)
+        eachFlying(blinktime: 2.0, visibletime:1.3 , self.button3)
+        eachFlying(blinktime: 2.2, visibletime:1.4 , self.button4)
+        eachFlying(blinktime: 2.6, visibletime:1.3 , self.button5)
+        eachFlying(blinktime: 1.7, visibletime:1.4 , self.button6)
+        eachFlying(blinktime: 2.8, visibletime:1.3 , self.button7)
+        eachFlying(blinktime: 3.2, visibletime:1.4 , self.button8)
+        eachFlying(blinktime: 1.8, visibletime:1.3 , self.button9)
+        eachFlying(blinktime: 2.7, visibletime:1.4 , self.button10)
+        eachFlying(blinktime: 2.4, visibletime:1.0 , self.cyou_button)
+        eachFlying(blinktime: 2.0, visibletime:1.0 , self.cyou_button2)
+        eachFlying(blinktime: 3.1, visibletime:1.0 , self.cyou_button3)
         }
-    
     
     //Segueの初期化をするメソッドをオーバーライド
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
