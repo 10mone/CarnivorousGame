@@ -19,7 +19,6 @@ class HomeViewController: UIViewController{
         //timer = Timer.scheduledTimer(withTimeInterval: 6.0, repeats: true, block: {_ in self.butterflyAnimation()})
     }
     
-    
     func flyingAnimation(){
          flying.alpha = 1.0
          UIView.animate(withDuration: 2.0, animations: {self.flying.alpha = 0.0},
@@ -38,7 +37,6 @@ class HomeViewController: UIViewController{
         self.flying.removeFromSuperview()
         self.butterfly.removeFromSuperview()
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

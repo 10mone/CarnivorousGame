@@ -28,12 +28,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var cyou_button3: UIButton!
     
     
-    
     @IBAction func button(_ sender: UIButton) {
         PushButton()
         sender.isHidden = true
     }
-    
     @IBAction func button2(_ sender: UIButton) {
         PushButton()
         sender.isHidden = true
@@ -99,7 +97,6 @@ class ViewController: UIViewController {
     }
     
     
-    //蚊を押したら合計スコア追加
     func PushButton(){
         score_sum += 1
         score.text = score_sum.description
@@ -111,7 +108,6 @@ class ViewController: UIViewController {
         self.performSegue(withIdentifier: "toLastPage", sender: score_sum.description)
     }
     
-    //消えた蚊を再び表示するまでの時間
     func BlinkFlying(visibletime: Double, _ sender: UIButton){
         sender.isHidden = false
         timer = Timer.scheduledTimer(withTimeInterval: visibletime, repeats: false, block: {_ in sender.isHidden = true})
